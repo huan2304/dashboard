@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <% include ./../elements/header %>
+</head>
+
+<body>
+
+  <div class="layout-wrapper layout-content-navbar">
+    <div class="layout-container">
+
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
+        <% include ./../elements/nav-header %>
+      </nav>
+
+      <div id="page-wrapper">
+        <%- body %>
+      </div>
+      <!-- /#page-wrapper -->
+    </div>
+  </div>
+  <!-- /#wrapper -->
+
+  <!-- Core Scripts - Include with every page -->
+  <% include ./../elements/footer %>
+</body>
+
+</html>

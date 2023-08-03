@@ -1,0 +1,23 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+    <div class="card" style="width: 40em">
+        <h5 class="card-header">Danh sách email</h5>
+        <div class="text-nowrap">
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Họ và tên</th>
+                <th>Email</th>
+              </tr>
+            </thead>
+            <tbody class="table-border-bottom-0">
+                <% listemail.forEach( (email)=>{ %>
+                    <tr>
+                        <td><strong><%= email.ten %></strong></td>
+                        <td><%= email.email %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+          </table>
+        </div>
+    </div>
+</div>

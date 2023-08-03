@@ -1,0 +1,11 @@
+<% 
+changeprice = (idDienThoai) => {
+    return `<form action="/list_dienthoai/change-price/${idDienThoai}" class="col-lg-6">
+        <label>Giá mới: ${idDienThoai} </label>
+        <input class="form-control" name="newprice" type="number">
+        <button class="btn btn-default" type="submit">Change</button>
+    </form>`
+
+}
+
+%>

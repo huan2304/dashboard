@@ -1,0 +1,16 @@
+<% 
+changeprice = (idDienThoai) => {
+    let rs=``;
+    idDienThoai.forEach((item, index) => {
+        rs += `<form method="post">
+        <label value="${item}" style="display: block">Giá mới: ${item} </label>
+        <input style="display: block" class="col-lg-6" name="newprice" type="number">
+        <button class="btn btn-default"  style="display: block; padding-top: 2px; padding-bottom: 2px;"type="submit">Change</button>
+        </form>
+        <br/>`
+    })
+    return rs;
+
+}
+
+%>
