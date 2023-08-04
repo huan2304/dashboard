@@ -49,10 +49,10 @@ app.use(session({
 app.use(passport.authenticate('session'));
 
 app.use('/', require('./routes/auth'));
-// app.all('*', (req, res, next) => {
-//   if (req.isUnauthenticated()) res.redirect('/login');
-//   else next();
-// }, require('./routes/auth'));
+app.all('*', (req, res, next) => {
+  if (req.isUnauthenticated()) res.redirect('/login');
+  else next();
+}, require('./routes/auth'));
 //app.use('/', require('./routes/auth'));
 app.use('/', indexRouter);
 
