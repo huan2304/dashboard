@@ -3,7 +3,7 @@ module.exports = {
     read: async(file) => {
         let result;
         let obj = {};
-        result = fs.readFileSync(path_base + '\\upload\\' + file, 'utf8')
+        result = fs.readFileSync(file, 'utf8')
         .toString()
         .split('\n')
         .map(e => e.trim())
@@ -18,7 +18,7 @@ module.exports = {
         let row = [];
         let result = [];
         let obj = {};
-        str = fs.readFileSync('upload\\' + file);
+        str = fs.readFileSync(file);
         str = str.toString();
         str = str.replace(/\r/g,'');
         row = str.split('\n');
@@ -38,7 +38,7 @@ module.exports = {
         let row = [];
         let result = [];
         let obj = {};
-        str = fs.readFileSync('upload\\' + file);
+        str = fs.readFileSync(file);
         str = str.toString();
         str = str.replace(/\r/g,'');
         row = str.split('\n');
