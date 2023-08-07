@@ -69,13 +69,13 @@ router.post('/mailer/cham-cong/submit', uploadHelper.uploadSingle('file', 'cham-
         subject: 'Chấm công Kidkul',
         html: htmlmail
       };
-      // T.sendMail(mailOptions, function(error, info){
-      //   if (error) {
-      //     console.log(error);
-      //   } else {
-      //     console.log('Email sent: ' + info.response);
-      //   }
-      // });
+      T.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email sent: ' + info.response);
+        }
+      });
       mailOptions = {};
 
       htmlmail = `<table style="border: 1px solid black; border-collapse: collapse; width: 50%; ">
