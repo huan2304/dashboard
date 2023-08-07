@@ -2,7 +2,7 @@ const multer  = require('multer');
 let uploadSingle = (name, folderDesk, maxSizeMB) => {
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path_base + '\\upload\\' + folderDesk + '\\')
+      cb(null, path_base + '/upload/' + folderDesk);
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname);
@@ -31,7 +31,7 @@ let uploadSingle = (name, folderDesk, maxSizeMB) => {
 let uploadArray = (name, folderDesk, maxSizeMB) => {
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, path_base + '\\upload\\' + folderDesk + '\\')
+      cb(null, path_base + '\\upload\\' + folderDesk + '\\');
     },
     filename: function (req, file, cb) {
       cb(null, file.originalname);

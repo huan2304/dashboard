@@ -16,7 +16,8 @@ router.get('/mailer/cham-cong', async function(req, res, next) {
 });
 
 router.post('/mailer/cham-cong/submit', uploadHelper.uploadSingle('file', 'cham-cong', 5), async function(req, res, next) {
-  let chamcong = model_file.csvToJSON(path_base + '\\upload\\cham-cong\\ChamCongOutput.csv','ngay','truong','lop','gv','thoigian','thoiluong');
+  console.log(path_base);
+  let chamcong = model_file.csvToJSON(path_base + '/upload/cham-cong/ChamCongOutput.csv','ngay','truong','lop','gv','thoigian','thoiluong');
   let listemail = [];
   listemail = await model_emailgiaovien.find({});
   let log = '';
@@ -90,7 +91,7 @@ router.post('/mailer/cham-cong/submit', uploadHelper.uploadSingle('file', 'cham-
   }
   else console.log(log);
 
-  unlink(path_base + '\\upload\\cham-cong\\ChamCongOutput.csv', (err) => {
+  unlink(path_base + '/upload/cham-cong/ChamCongOutput.csv', (err) => {
     if (err) throw err;
     console.log('xoa cham cong thanh cong');
   })
