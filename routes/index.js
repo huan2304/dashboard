@@ -4,7 +4,7 @@ var file = require('./../models/model_file');
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
-  
+  console.log(path_base);
   res.render('pages/backend/index');
 });
 
