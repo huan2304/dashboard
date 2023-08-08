@@ -22,7 +22,7 @@ router.post('/mailer/cham-cong/submit', uploadHelper.uploadSingle('file', 'cham-
   let log = '';
   let coEmail = 0;
   let chamconggv = [];
-  let htmlmail = `<table style="border: 1px solid black; border-collapse: collapse; width: 50%; ">
+  let htmlmail = `<table style="border: 1px solid black; border-collapse: collapse; width: 50%; max-width: 600px;">
   <tr style="border: 1px solid black; border-collapse: collapse;background-color: antiquewhite">
     <th style="border: 1px solid black; border-collapse: collapse;">Ngày</th>
     <th style="border: 1px solid black; border-collapse: collapse;">Họ và tên</th>

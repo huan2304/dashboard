@@ -4,9 +4,9 @@ function createTrans(email, pass){
   return nodemailer.createTransport({
     host: "mail.stemtruck.vn",
     port: 25,
-    rejectUnauthorized:false,
+    rejectUnauthorized: false,
     ignoreTLS: true,
-    secure: false,
+    secure: true,
     auth: {
       user: email,
       pass: pass
